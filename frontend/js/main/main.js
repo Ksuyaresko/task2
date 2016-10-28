@@ -22,7 +22,7 @@ require([
    $('#fullpage').fullpage({
     anchors:['firstPage', 'secondPage', 'thirdPage'],
     verticalCentered: false,
-    paddingTop: '100px',
+    paddingTop: '120px',
     paddingBottom: '100px',
     fixedElements: '.footer',
    });  
