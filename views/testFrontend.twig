@@ -1,0 +1,22 @@
+{% extends '_layout.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('/dependencies/stylesheets/awesome/font-awesome.css') }}" media="all" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block jsEntryPoint %}{{ asset('/dependencies/js/page/testFrontend.js') }}{% endblock %}
+
+{% block wrapper %}
+    <div class="viewBackBone" style="height: 10em;">
+        <i class="fa fa-bomb" aria-hidden="true"></i>
+        <img src="{{ asset('/dependencies/images/preloader.gif') }}"/>
+    </div>
+    <div class="viewMar" style="height: 10em;">
+        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        <img src="{{ asset('/dependencies/images/preloader.gif') }}"/>
+    </div>
+{% endblock %}

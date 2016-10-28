@@ -1,0 +1,20 @@
+{
+  title: 'I am in fixtures (fixtures/index.json)',
+  pages: [
+      {uri: 'http://http://localhost.o.o:3010/index', name: 'Lombard Capital'},
+      {uri: 'http://http://localhost.o.o:3010/about', name: 'Lombard Capital About'},
+      {uri: 'http://json6.org/', name: 'welcome to json6'},
+      {uri: 'http://json7.org/', name: 'welcome to json7'},
+      {uri: 'http://json8.org/', name: 'welcome to json8'}
+  ],
+    promo: [
+        {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg'},
+        {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg'},
+        {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg'},
+    ],
+    news: [
+        {imgscr: 'dependencies/images/news1.jpg', text: 'Только самые <strong>"Удачные Праздники"</strong> для наших клиентов!', date: '15 октября 2016'},
+        {imgscr: 'dependencies/images/news2.jpg', text: 'В новом отделении Запорожья, действует акция <strong>"Кредит"Шикарный"</strong>', date: '5 ноября 2016'},
+    ]
+    
+}

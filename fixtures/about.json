@@ -1,0 +1,26 @@
+{
+  title: 'About',
+  pages: [
+      {uri: 'http://http://localhost.o.o:3010/index', name: 'Lombard Capital'},
+      {uri: 'http://http://localhost.o.o:3010/about', name: 'Lombard Capital About'},
+      {uri: 'http://json6.org/', name: 'welcome to json6'},
+      {uri: 'http://json7.org/', name: 'welcome to json7'},
+      {uri: 'http://json8.org/', name: 'welcome to json8'}
+  ],
+        about: [
+        {img: 'dependencies/images/about1.jpg'},
+        {img: 'dependencies/images/about1.jpg'},
+        {img: 'dependencies/images/about1.jpg'},
+        {img: 'dependencies/images/about1.jpg'},
+        {img: 'dependencies/images/about1.jpg'},
+
+    ],
+    benefits: [
+        {top: ' ', text: '12', bottom:'лет на рынке'},
+        {top: ' ', text: '330', bottom:'отделений по всей стране'},
+        {top: ' ', text: '600', bottom:'сотрудников'},
+        {top: 'Более', text: '1 000 000', bottom:'клиентов'},
+        {top: 'Более', text: '3 500 000', bottom:'кредитов'},
+    ]
+    
+}

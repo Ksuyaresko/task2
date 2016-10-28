@@ -1,0 +1,23 @@
+{% extends '_layout.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('/dependencies/stylesheets/awesome/font-awesome.css') }}" media="all" rel="stylesheet">
+{% endblock %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block wrapper %}
+<div style="margin: 0 auto; height: 95vh; padding: 10em; min-width: 50em;">
+    <h2>contextable <small>(I am in views/contextable.twig)</small> <i class="fa fa-cogs" aria-hidden="true"></i> I can be custom configured</h2>
+    <h3>{{ requestQuery.title }}</h3>
+    <pre>
+// ------------------ OVERRIDES --------------------
+pages = [
+    // {parent: 'класс', uri: 'ссылка с параметрами', name: 'название'},
+    {parent: '', uri: '/contextable?title=src/controller.js:43', name: 'contextable.twig - измени меня в src/controller.js:43'},
+];
+// ------------------- ======== --------------------
+    </pre>
+</div>
+{% endblock %}

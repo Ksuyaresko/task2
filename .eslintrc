@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "brander"
+  ],
+  "rules": {},
+  "env": {
+    "node": true,
+    "browser": false,
+    "amd": false,
+    "es6": true
+  }
+}

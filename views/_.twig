@@ -1,0 +1,30 @@
+{% extends '_layout.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('/dependencies/stylesheets/awesome/font-awesome.css') }}" media="all" rel="stylesheet">
+    <link href="{{ asset('/dependencies/stylesheets/markupIndexPage.css') }}" media="all" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block jsEntryPoint %}{{ asset('/dependencies/js/page/markupIndexPage.js') }}{% endblock %}
+
+
+{% block wrapper %}
+    <div style="margin: 0 auto; height: 95vh; padding: 10em; min-width: 50em;">
+        <h2>{{ '::' }}<i class="fa fa-folder-open" aria-hidden="true"></i></h2>
+        <h3>{{ title }}</h3>
+        <ul class="page-list">
+            <li class="open-inner fa fa-folder" style="font-size: 1.6em;">
+                Open inner
+            </li>
+            {% for page in pages %}
+                <li class="{{ page.parent }}">
+                    <a href="{{ page.uri }}">{{ page.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

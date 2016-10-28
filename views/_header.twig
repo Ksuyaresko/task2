@@ -1,0 +1,27 @@
+
+<header id="header">
+<div class="wrapper">
+    <div class="header">
+        <a href="#" class="header__logo">Ломбард Капитал</a>
+        <nav class="header__nav">
+        {% for nav in navs %}
+        <a href="{{ nav.href }}" class="header__nav_item">{{ nav.name }}</a>
+        {% endfor %}
+        </nav>
+        <div class="header__search"></div>
+        <a href="{{ vkLink }}" class="header__vk">vk</a>
+        <div class="header__phone">
+            <span>0 800 300 703 <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+            <span>Звонки бесплатные</span>
+        </div>
+        <div>
+            <select class="header__lg">
+            <option value="Рус" selected>Рус</option>
+            <option value="Укр">Укр</option>
+            <option value="Eng">Eng</option>
+            </select>
+        </div>
+        
+    </div>
+    </div>
+</header>

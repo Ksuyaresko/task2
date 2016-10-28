@@ -1,0 +1,77 @@
+div.wrapper > div {
+  width: 400px;
+}
+
+h2 {
+  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+/*li:last-child {*/
+/*border: none;*/
+/*}*/
+
+li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 100%;
+
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -o-transition: color 0.3s ease, background-color 0.3s ease;
+  -ms-transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+li a:hover {
+  color: #0000AA;
+  background: #f6f6f6;
+}
+.page-list{
+  display: flex;
+  flex-direction: column;
+}
+.page-list [class^='inner']{
+  order: -1;
+  display: none;
+}
+
+.page-list [class^='inner'] a{
+  color: darkred;
+  text-indent: 40px;
+}
+.page-list [class^='inner'] a:hover{
+  color: darkgreen;
+}
+.page-list .open-inner{
+  order: -2;
+  cursor: pointer;
+}
+.page-list .open-inner:hover{
+  color: darkred;
+}
+.page-list .open-inner.opened{
+  color: darkred;
+}
+.page-list .open-inner.opened ~ [class^='inner']{
+  display: block;
+}
+.page-list [class*='layout'],
+.page-list [class*='modules'],
+.page-list .open-inner.opened ~ [class*='layout'],
+.page-list .open-inner.opened ~ [class*='modules']{
+  display: none;
+}

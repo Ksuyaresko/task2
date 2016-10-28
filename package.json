@@ -1,0 +1,37 @@
+{
+  "name": "node-prjct-change-me",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/.bin/nodemon -e json,js,twig bin/www",
+    "https": "node_modules/.bin/nodemon -e json,js,twig bin/www-https.js",
+    "gen-https": "cd config/keys && bash ../../bin/gen-https.sh"
+  },
+  "author": "Vladimir Odesskij <odesskij1992@gmail.com>",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "brander-gulp-tasks": "^0.0.5",
+    "browser-sync": "^2.12",
+    "chalk": "^1.1.3",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "glob": "^7.0.3",
+    "json5": "^0.5.0",
+    "lodash": "^4.13.1",
+    "main-bower-files": "^2.9.0",
+    "minimatch": "^3.0.0",
+    "nodemon": "^1.8.0",
+    "twig": "^0.9.5",
+    "yamljs": "^0.2.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-umd": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "eslint": "^3.1.1",
+    "eslint-config-brander": "0.0.3",
+    "eslint-import-resolver-node": "^0.2.2",
+    "eslint-plugin-import": "^1.11.1",
+    "gulp": "^3.9.1"
+  }
+}

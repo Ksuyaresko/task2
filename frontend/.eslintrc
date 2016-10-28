@@ -1,0 +1,9 @@
+{
+  "rules": {},
+  "env": {
+    "node": false,
+    "browser": true,
+    "amd": true,
+    "es6": true
+  }
+}

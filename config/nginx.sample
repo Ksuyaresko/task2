@@ -1,0 +1,17 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name markup.airport.delta.branderstudio.com;
+
+    disable_symlinks off;
+    client_max_body_size 500M;
+    error_log  /var/log/err.log;
+    access_log /var/log/acc.log;
+
+    location / {
+        proxy_pass       http://localhost:3011;
+        proxy_set_header Host      $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}

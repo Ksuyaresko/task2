@@ -1,0 +1,176 @@
+{% extends '_layout.twig' %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block wrapper %}
+<div class="about">
+{% include '_header.twig' %}
+    
+        <h5 class="about__nav">
+        <div class="wrapper">
+            <a href="index.html" class="about__nav_link">Главная</a>
+            <span>/</span>
+            <a href="about.html" class="about__nav_link"> О компании</a>
+        </div>
+        </h5>
+    
+<div id="fullpage">
+    
+
+    
+    <div class="section">
+        <div class="slider">
+              {% for slide in about %}  
+                <div class="slider__item">
+                <div><img src="{{ slide.img }}" width="100%"></div>
+                </div>
+                {% endfor %}
+        </div>
+
+        <div class="about__first">
+            <div class="wrapper">
+<a href="http://localhost.o.o:3010/about#secondPage" class="down"><img src="dependencies/images/down.png"></a>
+        <h1 class="about__first_title">Национальная сеть ломбардов «Капитал» </h1>
+        <h2 class="about__first_text">Работаем на рынке залогового микрокредитования населения Украин</h2>
+            </div>
+        </div>
+    </div><!--section 1 end-->
+    
+    
+    
+    
+    <div class="section">
+        <div class="wrapper">
+        <h2>За эти годы нашими услугами воспользовались более 1 500 000 клиентов, потому что в ломбарде "Капитал" им предоставили:</h2>
+        <div class="about__second col">
+        <div class="col__first">
+            <div class="col__item">
+                <img src="dependencies/images/ab1.jpg">
+                <span class="col__title">1</span>
+                <p class="col__text">Максимальную цену залога</p>
+            </div>
+            <div class="col__item">
+                <img src="dependencies/images/ab2.jpg">
+                <span class="col__title">2</span>
+                <p class="col__text">Максимальную цену залога</p>
+            </div>
+        </div>
+            
+        <div class="col__second">
+            <div class="col__item">
+                <img src="dependencies/images/ab3.jpg">
+                <span class="col__title">3</span>
+                <p class="col__text">Максимальную цену залога</p>
+            </div>
+            <div class="col__item">
+                <img src="dependencies/images/ab4.jpg">
+                <span class="col__title">4</span>
+                <p class="col__text">Максимальную цену залога</p>
+            </div>
+            <div class="col__item">
+                <img src="dependencies/images/ab5.jpg">
+                <span class="col__title">5</span>
+                <p class="col__text">Максимальную цену залога</p>
+            </div>
+        </div>
+        <div class="col__third">
+            <div class="col__item">
+                <img src="dependencies/images/ab6.jpg">
+                <span class="col__title">6</span>
+                <p class="col__text">Максимальную цену залога</p>
+            </div>
+            <div class="col__item">
+                <img src="dependencies/images/ab7.jpg">
+                <span class="col__title">7</span>
+                <p class="col__text">Максимальную цену залога</p>
+            </div>
+        </div>
+
+    
+    
+    
+    </div>
+        <a href="http://localhost.o.o:3010/about#thirdPage" class="down"><img src="dependencies/images/down.png"></a>
+        </div>
+    </div>
+    
+    
+    <div class="section">
+        <div class="wrapper">
+        <h2>Благодарим наших клиентов за выбор ломбарда «Капитал»</h2>
+        <p>Благодаря Вашему доверию и высокой оценке нашей работы в течение многих лет мы остаемся лидерами в сфере залогового микрокредитования. Это подтверждено престижными наградами, полученными нашей сетью ломбардов:</p>
+        
+        <div class="medals">
+        <div class="medals__item">
+            <img src="dependencies/images/medal1.jpg">
+        </div>
+        <div class="medals__item">
+            <img src="dependencies/images/medal2.jpg">
+        </div>
+        <div class="medals__item">
+            <img src="dependencies/images/medal3.jpg">
+        </div>
+        <div class="medals__item">
+            <img src="dependencies/images/medal4.jpg">
+        </div>
+        <div class="medals__item">
+            <img src="dependencies/images/medal4.jpg">
+        </div>
+        <div class="medals__item">
+            <img src="dependencies/images/medal4.jpg">
+        </div>
+        <div class="medals__item">
+            <img src="dependencies/images/medal4.jpg">
+        </div>
+            
+        </div>
+        <a href="http://localhost.o.o:3010/about#firstPage" class="down up"><img src="dependencies/images/down.png"></a>
+        
+    </div>
+    </div>
+
+    </div><!--fullpage end-->
+    
+                <footer class="footer">
+    <div class="wrapper">
+    <ul class="footer__list_main">
+            {% for text in benefits %}
+        <li class="benefits">
+            <span class="benefits__first">{{ text.top}}</span> 
+            <span class="benefits__main">{{ text.text}}</span>
+            <span class="benefits__last">{{ text.bottom}}</span>
+        </li>
+            {% endfor %}
+    </ul>
+    </div>
+        <div class="background">
+    <div class="wrapper">
+    <ul class="footer__list_bottom">
+        
+        <li class="footer__list"><span>Lombard Capital 2016</span></li>
+        <li class="footer__list"><span>Виды залогов</span></li>
+        <li class="footer__list"><span>Условия договора</span></li>
+        <li class="footer__list"><span>Тарифные планы</span></li>
+        <li class="footer__list">
+            <a href="ok.com" class="social ok">ok</a>
+            <a href="vk.com" class="social vk">vk</a>
+            <a href="fb.com" class="social fb">fb</a>
+        </li>
+    </ul>
+        
+    </div>
+        </div>
+    </footer>
+
+</div>
+
+    
+
+
+{% endblock %}

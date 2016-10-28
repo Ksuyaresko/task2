@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "app-landing-change-me",
+      "script": "/home/www-USER/www/bin/www",
+      "watch": false,
+      "node_args": "--harmony",
+      "merge_logs": true,
+      "error_file": "/home/www-USER/www/log/error.log",
+      "out_file": "/home/www-USER/www/log/out.log",
+      "max_memory_restart": "250M",
+      "instances": "1",
+      "exec_mode": "cluster",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "17001"
+      }
+    }
+  ]
+}

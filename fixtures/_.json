@@ -1,0 +1,12 @@
+{
+  title: 'I am in fixtures (fixtures/index.json)',
+    vkLink: 'https://vk.com/',
+    navs: [
+        {href: 'kredits.html', name: 'Кредиты'},
+        {href: 'kredits.html', name: 'Отделения'},
+        {href: 'kredits.html', name: 'Акции'},
+        {href: 'kredits.html', name: 'Программа лояльности'},
+        {href: 'kredits.html', name: 'О компании'},
+    ]
+    
+}

@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "AEROPORT_MARKUP",
+      "script": "/home/www-airport/markup/current/bin/www",
+      "watch": false,
+      "node_args": "--harmony",
+      "merge_logs": true,
+      "max_memory_restart": "250M",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": "3011"
+      }
+    }
+  ]
+}
