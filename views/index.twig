@@ -18,7 +18,8 @@
             <span class="slider__text_medium">{{ prom.textm }}</span>
             <span class="slider__text_small">{{ prom.texts }}</span>
         </h1>
-        <div><img src="{{ prom.img }}" width="100%"></div>
+        <div class="promo__img_desktop"><img src="{{ prom.img }}" width="100%" alt="1"></div>
+        <div class="promo__img_mob"><img src="{{ prom.imgmob }}" width="100%" alt="1"></div>
         </div>
         {% endfor %}
         
@@ -26,7 +27,7 @@
     
 <div class="promo__main">
 <div class="news">
-<h2 class="news__title">Последние новости 
+    <h2 class="news__title">Последние новости</h2>
     <a href="#" class="news__link">Все новости
         <span class="news__arrow">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -34,17 +35,16 @@
 <polygon points="14.3,2.6 13.7,3.4 20,8 5,8 5,9 20,9 13.7,13.6 14.3,14.4 22,8.5 22,8.5 " fill="#e60000" />
 </svg></span>
     </a>
-</h2>
     <ul class="news__list">
         {% for new in news %}
-        <li><img class="news__img" src="{{ new.imgscr }}">
+        <li class="news__item"><img class="news__img" src="{{ new.imgscr }}">
             <div class="news__text"><p>{{ new.text }}</p><span class="news__date">{{ new.date }}</span></div>
         </li>
         {% endfor %}
     </ul>
 </div>
 <div class="mail">
-    <p>Получите бонус <span class="red">+20% стоимости</span> при оценке Вашего имущества</p>
+    <p class="mail__title">Получите бонус <span class="red">+20% стоимости</span> при оценке Вашего имущества</p>
     <input class="mail__email" type="email" placeholder="Ваш E-mail...">
     <input class="mail__button" type="button" value="Отправить">
     <p class="mail__info">Мы отправим Вам купон по электронной почте</p>

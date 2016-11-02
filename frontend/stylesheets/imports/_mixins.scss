@@ -35,3 +35,19 @@
 		transform: translateY(-50%);
 	}
 }
+
+@mixin bp ($arg) {
+    @media only screen and (max-width:#{$arg}px) {
+        @content;
+    }
+    
+}
+
+@mixin btn {
+	padding: 12px 20px;
+    border: 2px solid #e60000;
+    color: #e60000;
+    border-radius: 30px;
+    margin: 0 0 0 -40px;
+    background: #fff;
+}

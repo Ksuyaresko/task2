@@ -12,12 +12,18 @@ $bgHeader2: #c50000;
 $bdHeader: #b10000;
 $newscolor: #494949;
 $bordergrey: #eaeaea;
+$grey: #454545;
 
 // Widths
 $minWidth: 320px;
+$desktoplarge: 1250;
+$desktopsmall: 1150;
+$tablet: 850;
+$mob: 500;
 
 // Fonts
 $family: 'PT Sans', sans-serif;
+$serif: 'PT Serif', serif;;
 $fz: 16px;
 $lh: 20px;
 
@@ -27,3 +33,4 @@ $imgurl : '/dependencies/images/';
 
 //BGImages
 $bgurl : '../images/';
+

@@ -10,8 +10,7 @@
 
 {% block wrapper %}
 <div class="about">
-{% include '_header.twig' %}
-    
+
         <h5 class="about__nav">
         <div class="wrapper">
             <a href="index.html" class="about__nav_link">Главная</a>
@@ -22,9 +21,7 @@
     
 <div id="fullpage">
     
-
-    
-    <div class="section">
+    <div class="section section_first">
         <div class="slider">
               {% for slide in about %}  
                 <div class="slider__item">
@@ -35,19 +32,24 @@
 
         <div class="about__first">
             <div class="wrapper">
-<a href="http://localhost.o.o:3010/about#secondPage" class="down"><img src="dependencies/images/down.png"></a>
         <h1 class="about__first_title">Национальная сеть ломбардов «Капитал» </h1>
         <h2 class="about__first_text">Работаем на рынке залогового микрокредитования населения Украин</h2>
+
+                    <a href="http://localhost.o.o:3010/about#secondPage" class="down down__first">
+                        <img src="dependencies/images/down.png">
+                    </a>
+
             </div>
         </div>
+                 
     </div><!--section 1 end-->
     
     
     
     
-    <div class="section">
+    <div class="section section__second">
         <div class="wrapper">
-        <h2>За эти годы нашими услугами воспользовались более 1 500 000 клиентов, потому что в ломбарде "Капитал" им предоставили:</h2>
+        <h2 class="about__second_title">За эти годы нашими услугами воспользовались более 1 500 000 клиентов, потому что в ломбарде "Капитал" им предоставили:</h2>
         <div class="about__second col">
         <div class="col__first">
             <div class="col__item">
@@ -58,7 +60,7 @@
             <div class="col__item">
                 <img src="dependencies/images/ab2.jpg">
                 <span class="col__title">2</span>
-                <p class="col__text">Максимальную цену залога</p>
+                <p class="col__text">Честные и выгодные процентные ставки по кредиту</p>
             </div>
         </div>
             
@@ -66,29 +68,29 @@
             <div class="col__item">
                 <img src="dependencies/images/ab3.jpg">
                 <span class="col__title">3</span>
-                <p class="col__text">Максимальную цену залога</p>
+                <p class="col__text">Гарантированную сохранность имущества клиента в течение всего срока договоракредита</p>
             </div>
             <div class="col__item">
                 <img src="dependencies/images/ab4.jpg">
                 <span class="col__title">4</span>
-                <p class="col__text">Максимальную цену залога</p>
+                <p class="col__text">Профессиональное и вежливое обслуживание</p>
             </div>
             <div class="col__item">
                 <img src="dependencies/images/ab5.jpg">
                 <span class="col__title">5</span>
-                <p class="col__text">Максимальную цену залога</p>
+                <p class="col__text">Быстрое получение наличных денег в кредит под залог золота всего за 5-7 минут, а под залог техники всего за 10-15 минут</p>
             </div>
         </div>
         <div class="col__third">
             <div class="col__item">
                 <img src="dependencies/images/ab6.jpg">
                 <span class="col__title">6</span>
-                <p class="col__text">Максимальную цену залога</p>
+                <p class="col__text">Простоту оформления кредита - без справок о доходах и без поручителей, только с паспортом</p>
             </div>
             <div class="col__item">
                 <img src="dependencies/images/ab7.jpg">
                 <span class="col__title">7</span>
-                <p class="col__text">Максимальную цену залога</p>
+                <p class="col__text">Возможность досрочно погасить кредит БЕЗ штрафов перерасчетом суммы процентов к возврату в сторону уменьшения</p>
             </div>
         </div>
 
@@ -96,12 +98,13 @@
     
     
     </div>
-        <a href="http://localhost.o.o:3010/about#thirdPage" class="down"><img src="dependencies/images/down.png"></a>
+        <a href="http://localhost.o.o:3010/about#thirdPage" class="down down__second">
+            <img src="dependencies/images/down.png"></a>
         </div>
     </div>
     
     
-    <div class="section">
+    <div class="section section__third">
         <div class="wrapper">
         <h2>Благодарим наших клиентов за выбор ломбарда «Капитал»</h2>
         <p>Благодаря Вашему доверию и высокой оценке нашей работы в течение многих лет мы остаемся лидерами в сфере залогового микрокредитования. Это подтверждено престижными наградами, полученными нашей сетью ломбардов:</p>
@@ -130,15 +133,17 @@
         </div>
             
         </div>
-        <a href="http://localhost.o.o:3010/about#firstPage" class="down up"><img src="dependencies/images/down.png"></a>
         
     </div>
+        <a href="http://localhost.o.o:3010/about#firstPage" class="down up"></a>
+        
     </div>
 
     </div><!--fullpage end-->
     
-                <footer class="footer">
+    <footer class="footer">
     <div class="wrapper">
+
     <ul class="footer__list_main">
             {% for text in benefits %}
         <li class="benefits">

@@ -11,6 +11,7 @@
     <link href="{{ asset('/dependencies/stylesheets/imports/slick.css') }}" media="all" rel="stylesheet">
     <link href="{{ asset('/dependencies/stylesheets/awesome/font-awesome.css') }}" media="all" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link href="{{ asset('/dependencies/stylesheets/styles.css') }}" media="all" rel="stylesheet">
     
     
@@ -38,7 +39,7 @@
 </head>
 <body {% block body_attributes %}{% endblock %}>
 <div class="wrapperMain">
-    <!--{% include '_header.twig' %}-->
+    {% include '_header.twig' %}
     {% block wrapper %}{% endblock %}
 </div>
 {% if var.env != 'production' %}

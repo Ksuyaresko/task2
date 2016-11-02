@@ -3,16 +3,60 @@
 <div class="wrapper">
     <div class="header">
         <a href="#" class="header__logo">Ломбард Капитал</a>
-        <nav class="header__nav">
+        <nav>
+            <ul class="header__nav">
         {% for nav in navs %}
-        <a href="{{ nav.href }}" class="header__nav_item">{{ nav.name }}</a>
+        <li>
+            <a href="{{ nav.href }}" class="header__nav_item {{ nav.class }}">{{ nav.name }}</a>
+            {% if nav.class %}
+                {% if nav.subelement %}
+                    <div class="subelement"></div>
+                {% endif %}
+                <ul class="submenu">
+                    {% for subm in nav.submenu %}
+                    <li class="submenu__li"><a href="{{ subm.href }}" class="submenu__item">{{ subm.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
         {% endfor %}
+            </ul>
         </nav>
-        <div class="header__search"></div>
+        <div class="header__search">
+            <div class="header__search_img"></div>
+            <div class="header__search_active">
+            <input type="search" class="header__search_input" value="Поиск...">
+            <input type="button" class="header__search_btn">
+                <div class="header__search_close">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            </div>
         <a href="{{ vkLink }}" class="header__vk">vk</a>
         <div class="header__phone">
-            <span>0 800 300 703 <i class="fa fa-angle-down" aria-hidden="true"></i></span>
-            <span>Звонки бесплатные</span>
+            <div>
+                <span class="header__phone_number">0 800 300 703 </span>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+            <div>
+                <span class="header__phone_info">Звонки бесплатные</span>
+                
+                <div class="callback">
+                    <p class="callback__title">Закажите обратный звонок</p>
+                    <input type="text" placeholder="Ваше имя" class="callback__name">
+                    <input type="tel" class="callback__tel" value="+38 (063) 60_-__-__" placeholder="">
+                    <input type="button" value="Заказать звонок" class="callback__button">
+                    <p class="callback__info">Мы перезваниваем ежедневно с 9:00 до 21:00</p>
+                    
+                    <div class="callback__close" id="callback__close">
+                    <span></span>
+                    <span></span>
+                    </div>
+                
+                </div>
+            </div>
         </div>
         <div>
             <select class="header__lg">
@@ -20,6 +64,12 @@
             <option value="Укр">Укр</option>
             <option value="Eng">Eng</option>
             </select>
+        </div>
+        <div class="burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+
         </div>
         
     </div>
