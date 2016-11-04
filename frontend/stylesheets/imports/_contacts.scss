@@ -1,0 +1,66 @@
+.contacts {
+  padding: 0 40px;
+  display: flex;
+  height: 90vh;
+  &__nav {
+    padding: 0 40px;
+  }
+  &__title {
+
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+  }
+  &__tel {
+    display: flex;
+    flex-direction: column;
+    &_icon {
+      display: inline-block;
+      width: 50px;
+      vertical-align: middle;
+      path {
+        fill: $bgHeader;
+      }
+    }
+  }
+  &__email {
+    &_icon {
+      display: inline-block;
+      width: 50px;
+      vertical-align: middle;
+      path {
+        fill: $bgHeader;
+      }
+
+    }
+  }
+  &__address {
+    &_icon {
+      display: inline-block;
+      width: 50px;
+      vertical-align: middle;
+
+    }
+  }
+  &__marketing {
+    display: flex;
+    flex-direction: column;
+  }
+  &__rent {
+    display: flex;
+    flex-direction: column;
+  }
+  &__vk {
+    color: $bgHeader;
+    &_arrow {
+      display: inline-block;
+      width: 22px;
+      vertical-align: middle;
+      svg {
+        fill: $bgHeader;
+      }
+    }
+  }
+}

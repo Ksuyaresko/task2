@@ -3,9 +3,7 @@
   pages: [
       {uri: 'http://http://localhost.o.o:3010/index', name: 'Lombard Capital'},
       {uri: 'http://http://localhost.o.o:3010/about', name: 'Lombard Capital About'},
-      {uri: 'http://json6.org/', name: 'welcome to json6'},
-      {uri: 'http://json7.org/', name: 'welcome to json7'},
-      {uri: 'http://json8.org/', name: 'welcome to json8'}
+      {uri: 'http://http://localhost.o.o:3010/contacts', name: 'Lombard Capital Contacts'},
   ],
     promo: [
         {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg', imgmob: 'dependencies/images/promomob.jpg', url:'#1',},
