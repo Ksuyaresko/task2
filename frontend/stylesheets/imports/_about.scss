@@ -1,4 +1,11 @@
 .about {
+    min-width: $minWidth;
+    @include bp ($desktopsmall) {
+        font-size: 0.8em;
+    }
+    @include bp ($mob) {
+        font-size: 0.5em;
+    }
 &__nav {
     margin: 10px 0 10px;
     word-spacing: 13px;
@@ -8,20 +15,22 @@
         color: $colorText;
         word-spacing: 3px;
     }
-}
-    .slider {
-        margin: 0 0 35px;
     }
-    .slick-prev {
-    right: 128px;
-    }
-    .slick-next {
-    right: 65px;
-    }
-    .slick-dots {
-    right: 69px;
-    bottom: calc(50% - 93px);
-    }
+    
+    .slider__item_box {
+        position: relative;
+        }
+        .slider__item {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url('../images/about1.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        }
+
     
 &__first {
     &_title {
@@ -30,75 +39,286 @@
         font-weight: normal;
         font-family: $serif;
         padding: 0 0 0 75px;
+                 @include bp ($tablet) {
+                font-size: 3em;
+                margin: 40px 0 38px;
+                padding: 0 0 0 43px;
+            }
+        @include bp ($mob) {
+                margin: 25px 0 30px;
+    padding: 0 0 0 20px;
+        } 
     }
     &_text {
         font-size: 1.125em;
         font-weight: normal;
         padding: 0 0 0 75px;
         margin: 0 0 20px 0;
+        line-height: 1.4;
+               @include bp ($tablet) {
+               font-size: 2.3em;
+               padding: 0 0 0 42px;
+            margin: 0 0 85px 0;
+        }
+        @include bp ($mob) {
+            padding: 0 0 0 20px;
+    margin: 0 0 45px 0;
+        }
     } 
     }
 &__second {
         display: flex;
     &_title {
         font-size: 1.5em;
-        padding: 0 0 0 70px;
+        padding: 0 20px 0 70px;
         margin: 0 0 20px 0;
         max-width: 940px;
+        @include bp ($tablet) {
+            padding: 25px 30px 0 35px;
+            margin: 0 0 65px 0;
+            font-size: 3em;
+        }
+        @include bp ($mob) {
+            padding: 10px 20px 0 20px;
+            margin: 0 0 35px 0;
+        }
     }
     }
 }
 
+.section_first {
+.slick-slider, .slick-slider .slick-list, .slick-slider .slick-list .slick-track {
+    display: flex;
+    flex: 1;
+    min-height: 250px;
+    @include bp ($tablet) {
+        min-height: 390px;
+    }
+}
+}
+.section_first {
+    .slick-prev, .slick-next {
+    width: 50px;
+    height: 50px;
+    background: url($bgurl + 'sliderarrows.png');
+    text-indent: -9999px;
+    overflow: hidden;
+    border: none;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    transform: translateY(50%);
+}
+    .slider {
+        margin: 0 0 35px;
+        flex: 1;
+        position: relative;
+    }
+    
+    .slick-prev {
+    right: 128px;
+    @include bp ($tablet) {
+        width: 95px;
+        height: 95px;
+        background-size: 205px 95px;
+        right: 142px;
+    }
+    @include bp ($mob) {
+    width: 50px;
+    height: 50px;
+    background: url($bgurl + 'sliderarrows.png');
+    
+    }
+    }
+    .slick-next {
+    right: 65px;
+    background-position: 160px 0px;
+        @include bp ($tablet) {
+        width: 95px;
+        height: 95px;
+        background-size: 205px 95px;
+        background-position:96px 0px;
+        right: 35px;
+}
+        @include bp ($mob) {
+        width: 50px;
+        height: 50px;
+        background: url($bgurl + 'sliderarrows.png');
+        background-position: 160px 0px;
+        right: 70px;
+    }
+    }
+    .slick-dots {
+    position: absolute;
+    right: 69px;
+    bottom: calc(50% - 93px);
+    text-indent: -9999px;
+    list-style: none;
+    @include bp ($tablet) {
+        bottom: calc(50% - 70px);
+        right: 40px;
+    }
+    @include bp ($mob) {
+        bottom: calc(50% - 80px);
+        right: 20px;
+    }
+    }
+        .slick-dots li {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-indent: -9999px;
+    margin-bottom: 16px;
+        @include bp ($tablet) {
+        width: 18px;
+        height: 18px;
+    }
+            @include bp ($mob) {
+             width: 12px;
+            height: 12px;
+            }
+}
+        .slick-active {
+    background: #fff !important;
+}
+    }
+
 .col {
     margin: auto;
-    padding: 0 50px;
+    padding: 0 60px;
     justify-content: center;
-    height: 100%;
+    max-height: 430px;
+    width: 100%;
     align-items: center;
     align-self: center;
+    flex: 1;
+    overflow: hidden;
+    @include bp ($tablet) {
+        flex-direction: column;
+        max-height: 100%;
+        padding: 0 40px;
+    }
+    @include bp ($mob) {
+        padding: 0 15px;
+    }
+    
     &__first {
         display: flex;
         flex-direction: column;
+        height: 100%;
+        flex-basis: 32%;
+        @include bp ($tablet) {
+            width: 100%;
+        }
     }
     &__second {
         display: flex;
         flex-direction: column;  
         margin: auto;
+        height: 100%;
+        flex-basis: 32%;
     }
     &__third {
         display: flex;
         flex-direction: column; 
+        height: 100%;
+        flex-basis: 32%;
+        @include bp ($tablet) {
+            border-bottom: 1px solid #eaeaea;
+            padding: 0 0 70px 0;        }
+        @include bp ($mob) {
+            padding: 0 0 30px 0;
+        }
     }
     &__item {
         position: relative;
         padding: 10px;
+        overflow: hidden;
+        flex-grow: 1;
+        background-size: cover;
+        margin-bottom: 5%;
+        @include bp ($tablet) {
+            min-height: 150px;
+        }
     }
     &__title {
         position: absolute;
-        top: 33px;
-        left: 43px;
+        top: 20px;
+        left: 25px;
         font-size: 2.625em;
         font-weight: bold;
+        @include bp ($desktopsmall) {
+            top: 15px;
+            left: 20px;
+        }
+        @include bp ($tablet) {
+            top: 30px;
+            left: 45px;
+            font-size: 5.625em;
+        }
+        @include bp ($mob) {
+            top: 15px;
+            left: 25px;
+            font-size: 4.625em;
+        }
+
     }
     &__text {
-        position: absolute;
-        left: 90px;
-        right: 80px;
-        top: 37px;
-        font-size: 1em;
-        margin: 0;
+        font-size: 0.9em;
+        margin: 15px 0 0 55px;
         line-height: 1.5;
+        @include bp ($desktopsmall) {
+            margin: 10px 20px 0 40px;
+        }
+        @include bp ($tablet) {
+            margin: 40px 70px 40px 120px;
+            font-size: 2em;
+            line-height: 1.3;
+        }
+        @include bp ($mob) {
+            margin: 10px 20px 20px 60px;
+            font-size: 1.8em;
+            line-height: 1.3;
+        }
     }
 }
+
 
 .about__nav {
     position: fixed;
     top: 78px;
     left: 0;
     right: 0;
-     z-index: 5;
+    z-index: 5;
     margin: 0;
     padding: 28px 87px;
+    @include bp ($tablet) {
+        display: none;
+    }
+    &_mob {
+        padding: 0px 87px;
+        display: none;
+        position: relative;
+        @include bp ($tablet) {
+        display: block;
+        font-size: 1.7em;
+            opacity: 0.4;
+    } 
+        &:before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 30px;
+            transform: rotateZ(180deg);
+            left: 20px;
+            top: 6px;
+            background: url('../images/arrow.svg');
+            background-size: 100px;
+        }
+    }
 }
 .footer {
     position: absolute;
@@ -107,23 +327,51 @@
     right: 0px;
     background: #fff;
     z-index: 1;
+            @include bp ($tablet) {
+                display: none;
+            }
     &__list {
         &_main {
         list-style: none;
-        margin: 0 0 0 100px;
-        padding: 0 100px 0 0;
+        margin: 0 80px 51px 90px;
+        padding: 0px 100px 0 0;
         display: flex;
         justify-content: space-between;
         position: relative;
         left: -20px;
+            @include bp ($tablet) {
+            flex-direction: column;
+            padding: 0 0 65px 0;
+            margin: 0 35px 40px;
+            left: 0;
+            flex-grow: 1;
+            }
+            @include bp ($mob) {
+                margin: 0 20px 20px;
+                padding: 0 0 30px 0;
+            }
         &:before {
         content: "";
-        width: 100%;
+        width: 91%;
         border-top: 1px solid $bordergrey;
         position: absolute;
         top: 1px;
-        z-index: -1;
+        right: 0px;
+        z-index: -1;  
+            @include bp ($tablet) {
+                width: 86%;
+            }
     } 
+            @include bp ($tablet) {
+                &:after {
+                content: "";
+            width: 100%;
+            border-top: 1px solid $bordergrey;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+                }
+            }   
     }
     &_bottom {
         background: $bgmain;
@@ -134,33 +382,99 @@
         justify-content: center;
         font-size: 1em;
         opacity: 0.6;
+         @include bp ($desktopsmall) {
+                font-size: 0.8em;
+            }
+        @include bp ($tablet) {
+            font-size: 1.6em;
+            flex-direction: column;
+            align-items: center;
+            padding: 63px 40px;
+        }
+        @include bp ($mob) {
+            font-size: 0.7em;
+            padding: 30px 15px;
+        }
+
         }
 }
     &__list {
         margin: 0 20px 0 0;
+        @include bp ($tablet) {
+            margin: 0 0 46px 0;
+        }
+        @include bp ($mob) {
+            margin: 0 0 30px 0;
+        }
         &:first-child {
             margin-right: auto;
+            @include bp ($tablet) {
+                order: 4;
+                margin: -35px 0 0 0;
+                align-self: flex-start;
+            }
+            @include bp ($mob) {
+                margin: -20px 0 0 0;
+            }
         }
         &:last-child {
             margin-left: auto;
+            @include bp ($tablet) {
+                margin: 0;
+                align-self: flex-end;
+            }
         }
     }
 }
 .benefits {
     display: flex;
     flex-direction: column;
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
     &:first-child {
         border-top: 3px solid $bgHeader;
     }
+    @include bp ($desktopsmall) {
+                font-size: 0.8em;
+            }
+     @include bp (900) {
+                font-size: 0.7em;
+            }
+    @include bp ($tablet) {
+        &:first-child {
+        border-top: 3px solid $bgHeader;
+        width: 195px;
+    }
+        @include bp ($mob) {
+            padding: 10px 0 0 0;
+        }
+    &:nth-child(n + 4) {
+        margin-top: 45px;
+        @include bp ($mob) {
+            margin-top: 20px;
+        }
+    }
+            }
+    &__mob {
+        display: none;
+        @include bp ($tablet) {
+            display: flex;
+            margin: 0;
+            font-size: 2.85em;
+        }
+    }
+    
     &__first {
         display: inline-block;
         min-height: 1.35em;
         font-size: 1em;
         opacity: 0.6;
+        @include bp ($tablet) {
+             min-height: 1em;
+        }
     }
     &__main {
         font-size: 2.625em;
+        
     }
     &__last {
         font-size: 1em;
@@ -168,10 +482,63 @@
     }
 }
 .medals {
-    display: flex;
+    margin: auto 0;
+    text-align: center;
+        padding: 0 30px;
+    @include bp ($tablet) {
+        margin: 0 0 50px 0;
+    }
+    &__title {
+        padding: 0 20px 0 50px;
+        font-size: 2em;
+        font-weight: bold;
+        @include bp ($tablet) {
+            padding: 36px 20px 0 40px;
+            font-size: 3em;
+        }
+        &_bottom {
+            padding: 30px 0 0 50px;
+            font-size: 1.125em;
+            position: relative;
+            @include bp ($tablet) {
+                padding: 30px 20px 0 35px;
+                font-size: 2.125em;
+                line-height: 1.5;
+            }
+            &:before {
+                content: "";
+                display: block;
+                width: 100px;
+                border-top: 4px solid $bgHeader;
+                position: relative;
+                top: -35px;
+                left: 0px;
+                @include bp ($tablet) {
+                    top: -45px;
+                }
+            }
+        }
+    }
+    &__text_slider {
+        @include bp ($tablet){
+        font-size: 2em;
+        }
+    }
+    &__text {
+        text-align: center;
+        color: #3d3d3d;
+        @include bp ($tablet){
+        font-size: 2em;
+        }
+    }
+    @include bp ($tablet) {
+        padding: 0 30px 0 30px;
+    }
     &__item {
-        display: inline-block;
+        //display: inline-block;
         margin: 0 1% 0;
+        text-align: center;
+        position: relative;
     }
     .slick-next, .slick-prev {
         width: 18px;
@@ -180,8 +547,15 @@
     } 
     .slick-next {
         background: url(../images/medalarrow.png) no-repeat;
-        right: 0;
-        top: calc(50% - 40px);
+        right: 8px;
+        top: calc(50% - 20px);
+        position: absolute;
+        text-indent: -9999px;
+        border: 0;
+        @include bp ($tablet) {
+            right: 30px;
+            top: calc(50% - 80px)
+    }
     }
     .slick-prev {
         transform: rotateY(180deg);
@@ -189,12 +563,55 @@
         top: calc(50% - 17px);
         display: none !important;
     }
+    .slick-dots {
+        display: inline-flex;
+        list-style: none;
+        overflow: hidden;
+        margin: 15px auto 0;
+        padding: 5px 0 0 0;
+        @include bp ($tablet) {
+                margin: 75px auto 0;
+        }
+        .slick-active {
+            background: $bgHeader !important;
+        }
+        li {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            border: 1px solid $bgHeader;
+            text-indent: -9999px;
+            margin: 0 10px 0;
+            button {
+                border: 0;
+            }
+            @include bp ($tablet) {
+            width: 15px;
+            height: 15px;
+        }
+        }
+    }
+    .slick-slide img {
+        @include bp ($tablet) {
+        margin: 0 auto 23px;
+        width: 380px;
+        }
+        @include bp ($mob) {
+            width: 70%;
+        }
+    }
+
 }
+
 .down {
     position: absolute;
     z-index: 200;
-    right: 50px;
-    bottom: 90px;
+    right: 80px;
+    bottom: 140px;
+    @include bp ($tablet) {
+        display: none;
+    }
+
 }
 .fp-viewing-firstPage .down__second {
     display: none;
@@ -206,11 +623,7 @@
 .fp-viewing-thirdPage .down {
     display: none;
 }
-/*.up {
-    width: 50px;
-    height: 50px;
-    background: #fff;
-}*/
+
 .background {
     background: $bgmain;
 }
@@ -224,10 +637,31 @@
 }
 .vk {
     background-position: -40px 0;
+    @include bp ($tablet) {
+        width: 40px;
+        height: 20px;
+        background: url('../images/socialvk.png') no-repeat;
+        vertical-align: baseline;
+    }
+    @include bp ($mob) {
+         width: 20px;
+        height: 18px;
+        background: url('../images/social.png') no-repeat;
+        background-position: -40px 0;
+    }
 }
 .fb {
     background-position: -70px 0;
+    @include bp ($tablet) {
+        display: none;
+    }
+}
+.ok {
+    @include bp ($tablet) {
+        display: none;
+    }
 }
 .section {
-
+    display: flex;
+    flex-direction: column;
 }

@@ -1,0 +1,14 @@
+    <div class="slider">
+      {% for prom in promo %}  
+        <div class="slider__item">
+        <h1 class="slider__text">
+            <span class="slider__text_large">{{ prom.textl }}</span>
+            <span class="slider__text_medium">{{ prom.textm }}</span>
+            <span class="slider__text_small">{{ prom.texts }}</span>
+        </h1>
+            <div class="slider__link_box">
+            <a href="{{ prom.url }}" class="slider__link"></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>

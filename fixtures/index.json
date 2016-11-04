@@ -8,9 +8,9 @@
       {uri: 'http://json8.org/', name: 'welcome to json8'}
   ],
     promo: [
-        {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg', imgmob: 'dependencies/images/promomob.jpg'},
-        {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg', imgmob: 'dependencies/images/promomob.jpg'},
-        {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg', imgmob: 'dependencies/images/promomob.jpg'},
+        {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg', imgmob: 'dependencies/images/promomob.jpg', url:'#1',},
+        {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg', imgmob: 'dependencies/images/promomob.jpg', url:'#',},
+        {textl: 'Деньги', textm: 'за 15 минут', texts: 'только паспорт и код', img: 'dependencies/images/promo1.jpg', imgmob: 'dependencies/images/promomob.jpg', url:'#',},
     ],
     news: [
         {imgscr: 'dependencies/images/news1.jpg', text: 'Только самые <strong>"Удачные Праздники"</strong> для наших клиентов!', date: '15 октября 2016'},

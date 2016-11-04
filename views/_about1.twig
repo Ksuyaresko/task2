@@ -1,0 +1,46 @@
+    <div class="section section_first">
+        <div class="slider">
+            
+                <div class="slider__item_box">
+                    <div class="slider__item">
+                    </div>
+                </div>
+            
+            <div class="slider__item_box">
+                    <div class="slider__item">
+                    </div>
+                </div>
+            
+            <div class="slider__item_box">
+                    <div class="slider__item">
+                    </div>
+                </div>
+            
+        </div>
+
+        <div class="about__first">
+            <div class="wrapper">
+        <h1 class="about__first_title">Национальная сеть ломбардов «Капитал» </h1>
+        <h2 class="about__first_text">Работаем на рынке залогового микрокредитования населения Украины с 2004 года.</h2>
+
+                    <a href="http://localhost.o.o:3010/about#secondPage" class="down down__first">
+                        <img src="dependencies/images/down.png">
+                    </a>
+
+            </div>
+        </div>
+    
+    
+    <div class="wrapper benefits__mob">
+    <ul class="footer__list_main">
+            {% for text in benefits %}
+        <li class="benefits">
+            <span class="benefits__first">{{ text.top}}</span> 
+            <span class="benefits__main">{{ text.text}}</span>
+            <span class="benefits__last">{{ text.bottom}}</span>
+        </li>
+            {% endfor %}
+    </ul>
+    </div>
+        
+    </div><!--section 1 end-->

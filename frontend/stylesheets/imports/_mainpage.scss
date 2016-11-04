@@ -2,6 +2,10 @@
     position: relative;
     background: $bgmain;
     min-height: calc(100vh - 88px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: $minWidth;
     @include bp ($mob) {
         font-size: 0.6em;
     }
@@ -21,29 +25,60 @@
 h1, h2 {
     font-size: 1em;
 }
-.slider {
+.promo .slider {
+    flex-grow: 1;
+}
+.promo__img_desktop {
+    height: 100%;
+    width: auto;
+}
+
+
+.promo .slider {
     color: $colorNavText;
-    margin: 78px 0 30px 0;
+    margin: 0px 0 30px 0;
     @include bp ($desktopsmall) {
                 font-size: 0.8em;
             }
     @include bp ($mob) {
-                margin: 58px 0 30px 0;
+                margin: 0px 0 30px 0;
             }
     &__item {
         position: relative;
+    }
+    &__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../images/promo1.jpg);
+        background-size: cover;
+        background-position: 50% 50%;
+        &_box {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        @include bp ($tablet) {
+            background: url(../images/promomob.jpg);
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
     }
     &__text {
         font-family: 'Times New Roman';
         display: flex;
         flex-direction: column;
         position: absolute;
+        z-index: 50;
         @include bp ($tablet) {
             width: 100%;
             flex-direction: row;
             text-align: right;
             display: block;
-            padding: 25px 50px 0 0;
+            padding: 45px 50px 0 0;
         }
         @include bp ($mob) {
             padding: 15px 20px 0 0;
@@ -88,6 +123,8 @@ h1, h2 {
             }
             @include bp ($tablet) {
                 display: block;
+                font-size: 2em;
+                padding: 60px 0 0 99px;
             }
         }
     }
@@ -96,8 +133,7 @@ h1, h2 {
     display:flex; 
     max-width: 1265px;
     padding: 0 30px;
-    margin: 0 auto;
-    height: 100%;
+    margin: 0 0 30px 0;
     flex-direction: row;
     @include bp ($desktopsmall) {
         font-size: 0.8em;
@@ -105,6 +141,9 @@ h1, h2 {
     @include bp ($tablet) {
         flex-direction: column;
         font-size: 1em;
+    }
+    @include bp ($mob) {
+            padding: 0 10px;
     }
 }
 .news {
@@ -126,13 +165,21 @@ h1, h2 {
             padding: 0 5px 0 0;
         }
         @include bp ($tablet) {
-            margin: 0 0 30px 0;
+            margin: 0 0 48px 0;
+            padding: 17px 5px 0 10px;
         }
     }
     &__title {
         margin: 8px 0 38px 0;
         font-size: 1.3125em;
         display: inline-block;
+        @include bp ($tablet) {
+            margin: 50px 0 39px 15px;
+            font-size: 2.5em;
+        }
+        @include bp ($mob) {
+            margin: 30px 0 25px 15px;
+        }
     }
     &__link {
         display: inline-block;
@@ -159,6 +206,7 @@ h1, h2 {
         justify-content: space-between;
         @include bp ($tablet) {
             flex-direction: column;
+            padding: 0 0 16px 0;
         }
     }
     &__img {
@@ -169,7 +217,11 @@ h1, h2 {
             width: 40%;
         }
         @include bp ($tablet) {
-            width: 20%;
+            width: 38%;
+            margin: 0 35px 0 0;
+        }
+        @include bp ($mob) {
+             margin: 0 20px 0 0;
         }
     }
     &__text {
@@ -181,6 +233,12 @@ h1, h2 {
         p {
             margin-top: 0;
         }
+        @include bp ($tablet) {
+            font-size: 1.7em;
+        }
+        @include bp ($mob) {
+            font-size: 1.5em;
+        } 
     }
     &__date {
         opacity: 0.6;
@@ -193,12 +251,17 @@ h1, h2 {
     }
     @include bp ($tablet) {
         width: 100%;
+        padding: 30px 0 0 0;
     }
     &__title {
         text-align: center;
         font-size: 1.125em;
         font-weight: bold;
         margin: 1.5em 0 1.7em;
+        @include bp ($tablet) {
+            font-size: 2em;
+            margin: 1.0em 0 1em;
+        }
     }
     &__email {
         padding: 14px 20px;
@@ -208,10 +271,14 @@ h1, h2 {
         font-size: 14px;
         width: 70%;
         @include bp ($tablet) {
-        width: 65%;
+            width: 74%;
+            font-size: 18px;
+            padding: 30px 45px;
+            border-radius: 60px;
     }
         @include bp ($mob) {
-            font-size: 10px;
+            font-size: 14px;
+            padding: 20px 25px;
         }
     }
     &__button {
@@ -227,12 +294,26 @@ h1, h2 {
         @include bp ($desktopsmall) {
             padding: 12px 8px;
         }
+        @include bp ($tablet) {
+            padding: 30px 8px;
+            width: 35%;
+            margin: 0 0 0 -60px;
+            border-radius: 60px;
+        }
+        @include bp ($mob) {
+            font-size: 1.2em;
+            padding: 20px 8px;
+        }
     }
     &__info {
         opacity: 0.4;
         font-size: 0.875em;
         text-align: center;
         margin: 1.4em 0;
+        @include bp ($tablet) {
+            font-size: 1.2em;
+            margin: 1.8em 0;
+        }
     }
 }
 
@@ -240,7 +321,8 @@ h1, h2 {
     color: $bgHeader;
 }
 
-.slick-prev, .slick-next {
+.promo {
+    .slick-prev, .slick-next {
     width: 50px;
     height: 50px;
     background: url($bgurl + 'sliderarrows.png');
@@ -254,15 +336,34 @@ h1, h2 {
 }
 .slick-prev {
     right: 147px;
+    @include bp ($tablet) {
+        width: 95px;
+        height: 95px;
+        background-size: 205px 95px;
+        right: 142px;
+    }
     @include bp ($mob) {
-        right: 115px;
+    width: 50px;
+    height: 50px;
+    background: url($bgurl + 'sliderarrows.png');
     }
 }
 .slick-next {
     right: 87px;
     background-position: 160px 0px;
-    @include bp ($mob) {
-        right: 50px;
+        @include bp ($tablet) {
+        width: 95px;
+        height: 95px;
+        background-size: 205px 95px;
+        background-position:96px 0px;
+        right: 35px;
+}
+        @include bp ($mob) {
+        width: 50px;
+        height: 50px;
+        background: url($bgurl + 'sliderarrows.png');
+        background-position: 160px 0px;
+        right: 70px;
     }
 }
 
@@ -291,7 +392,22 @@ h1, h2 {
     border-radius: 50%;
     text-indent: -9999px;
     margin-bottom: 16px;
+    @include bp ($tablet) {
+        width: 18px;
+        height: 18px;
+    }
 }
 .slick-active {
     background: #fff !important;
+}
+}
+.promo {
+.slick-slider, .slick-slider .slick-list, .slick-slider .slick-list .slick-track {
+    display: flex;
+    flex: 1;
+    min-height: 350px;
+    @include bp ($tablet) {
+        min-height: 560px;
+    }
+}
 }

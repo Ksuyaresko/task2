@@ -8,29 +8,30 @@ require([
 ], function ($) {
 'use strict';
     
-    $('.slider').slick({
-      dots: true,
-    });
+$('.slider').slick({
+    dots: true,
+});
     
     
-    $('.medals').slick({
-      dots: false,
-      slidesToShow: 4,
-      slidesToScroll: 1,
+$('.medals').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+    {
+    breakpoint: 850,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }]
     });
+ 
 
-   $('#fullpage').fullpage({
-    anchors:['firstPage', 'secondPage', 'thirdPage'],
-    verticalCentered: false,
-    paddingTop: '148px',
-    paddingBottom: '180px',
-    fixedElements: '.footer, .down',
-   });  
     
-    
-//$(window).on("load resize", function() {
     if ($(window).width() <= 850) {	
-        $('.header__nav li').off('hover');
+        $('.header__nav li').unbind('mouseenter mouseleave');
 
         } else {
             $('.header__nav li').hover(function() {
@@ -42,7 +43,25 @@ require([
         submenu.stop(true, true).slideUp(400).clearQueue();
         });
         };
-//});   
+  
+   
+    
+$(window).resize(function(){
+if ($(window).width() <= 850) {	
+        $('.header__nav li').unbind('mouseenter mouseleave');
+
+        } else {
+        $('.header__nav li').hover(function() {
+        var submenu = $(this).find('ul');
+        submenu.stop(true, true).slideDown(300).clearQueue();	
+
+    }, function() {
+        var submenu = $(this).find('ul');
+        submenu.stop(true, true).slideUp(400).clearQueue();
+        });
+        };
+});
+    
     
     
 $(".burger").click(function(){
@@ -57,37 +76,77 @@ $(".subelement").click(function(){
     $(".nav__mob li:last-child .submenu").toggleClass("visible");
     });
 
-    
-    
-    //$(window).on("load resize", function() {
-    if ($(window).width() >= 850) {
-        $(".header__phone").click(function(){
-            $(".callback").toggleClass("visible");
-            $(".fa-angle-down").toggleClass("turned");
+
+
+function CallbackCheck() {    
+     if ($(window).width() < 850) {
+         
+    $(".callback__btn").click(function(){
+    $(".callback").addClass("visible");
+        //console.log('open click on window < 850');
     });
-    } 
-    else {
+         
     $(".callback__close").click(function(){
-        $(".callback").removeClass("visible");
+    $(".callback").removeClass("visible");
+        //console.log('close click on window < 850');
     }); 
         
-    $(".fa-angle-down").click(function(){
-        $(".callback").addClass("visible");
-    });
+
     }
-    // });
+     else /*($(window).width() > 850)*/ {
+        $(".header__phone_number,  .header__phone_info, .fa-angle-down").click(function(){
+        $(".callback").toggleClass("visible");
+            //console.log('toggle class on window > 850');
+    });
+    } 
+};
     
+$(CallbackCheck);
+$(window).resize(CallbackCheck);    
+
     
     $(".header__search_img").click(function(){
         $(".header__search_active").addClass("visible");
-        //$(".header__search_img").addClass("invisible");
     });
     
     $(".header__search_close").click(function(){
         $(".header__search_active").removeClass("visible");
-        //$(".header__search_img").removeClass("invisible");
     });
 
 
+    
+   
+    
+    //----FullPage---//
+    
+var fullPageCreated = false;
+createFullpage();
+    
+function fullPageCheck() {
+    if ($(window).width() <= 850) {
+    console.log("not fullpage");
+    fullPageCreated = false;  
+    $.fn.fullpage.destroy('all');
+    }
+    if ($(window).width() > 850) {
+        createFullpage();
+    }
+}
+    
+function createFullpage() {
+    if(fullPageCreated === false) {
+        fullPageCreated = true;
+    $('#fullpage').fullpage({
+        anchors:['firstPage', 'secondPage', 'thirdPage'],
+        verticalCentered: false,
+        paddingTop: '148px',
+        paddingBottom: '250px',
+        fixedElements: '.footer, .down',
+    });
+}
+}
+    
+$(fullPageCheck);
+$(window).resize(fullPageCheck);
 
 });

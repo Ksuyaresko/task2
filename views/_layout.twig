@@ -39,7 +39,7 @@
 </head>
 <body {% block body_attributes %}{% endblock %}>
 <div class="wrapperMain">
-    {% include '_header.twig' %}
+    {% include '_header.twig' with {'title', 'vkLink', 'navs'} %}
     {% block wrapper %}{% endblock %}
 </div>
 {% if var.env != 'production' %}
