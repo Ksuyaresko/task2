@@ -6,21 +6,21 @@
     @include bp ($mob) {
         font-size: 0.5em;
     }
-&__nav {
-    margin: 10px 0 10px;
-    word-spacing: 13px;
-    background: #fff;
-    &_link {
-        text-decoration: none;
-        color: $colorText;
-        word-spacing: 3px;
+    &__nav {
+        margin: 10px 0 10px;
+        word-spacing: 13px;
+        background: #fff;
+        &_link {
+            text-decoration: none;
+            color: $colorText;
+            word-spacing: 3px;
+        }
     }
-    }
-    
+
     .slider__item_box {
         position: relative;
-        }
-        .slider__item {
+    }
+    .slider__item {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -29,162 +29,162 @@
         background: url('../images/about1.jpg');
         background-size: cover;
         background-position: 50% 50%;
-        }
+    }
 
-    
-&__first {
-    &_title {
-        font-size: 2.375em;
-        margin: 20px 0 20px;
-        font-weight: normal;
-        font-family: $serif;
-        padding: 0 0 0 75px;
-                 @include bp ($tablet) {
+
+    &__first {
+        &_title {
+            font-size: 2.375em;
+            margin: 20px 0 20px;
+            font-weight: normal;
+            font-family: $serif;
+            padding: 0 0 0 75px;
+            @include bp ($tablet) {
                 font-size: 3em;
                 margin: 40px 0 38px;
                 padding: 0 0 0 43px;
             }
-        @include bp ($mob) {
+            @include bp ($mob) {
                 margin: 25px 0 30px;
-    padding: 0 0 0 20px;
-        } 
-    }
-    &_text {
-        font-size: 1.125em;
-        font-weight: normal;
-        padding: 0 0 0 75px;
-        margin: 0 0 20px 0;
-        line-height: 1.4;
-               @include bp ($tablet) {
-               font-size: 2.3em;
-               padding: 0 0 0 42px;
-            margin: 0 0 85px 0;
+                padding: 0 0 0 20px;
+            }
         }
-        @include bp ($mob) {
-            padding: 0 0 0 20px;
-    margin: 0 0 45px 0;
+        &_text {
+            font-size: 1.125em;
+            font-weight: normal;
+            padding: 0 0 0 75px;
+            margin: 0 0 20px 0;
+            line-height: 1.4;
+            @include bp ($tablet) {
+                font-size: 2.3em;
+                padding: 0 0 0 42px;
+                margin: 0 0 85px 0;
+            }
+            @include bp ($mob) {
+                padding: 0 0 0 20px;
+                margin: 0 0 45px 0;
+            }
         }
-    } 
     }
-&__second {
+    &__second {
         display: flex;
-    &_title {
-        font-size: 1.5em;
-        padding: 0 20px 0 70px;
-        margin: 0 0 20px 0;
-        max-width: 940px;
-        @include bp ($tablet) {
-            padding: 25px 30px 0 35px;
-            margin: 0 0 65px 0;
-            font-size: 3em;
+        &_title {
+            font-size: 1.5em;
+            padding: 0 20px 0 70px;
+            margin: 0 0 20px 0;
+            max-width: 940px;
+            @include bp ($tablet) {
+                padding: 25px 30px 0 35px;
+                margin: 0 0 65px 0;
+                font-size: 3em;
+            }
+            @include bp ($mob) {
+                padding: 10px 20px 0 20px;
+                margin: 0 0 35px 0;
+            }
         }
-        @include bp ($mob) {
-            padding: 10px 20px 0 20px;
-            margin: 0 0 35px 0;
-        }
-    }
     }
 }
 
 .section_first {
-.slick-slider, .slick-slider .slick-list, .slick-slider .slick-list .slick-track {
-    display: flex;
-    flex: 1;
-    min-height: 250px;
-    @include bp ($tablet) {
-        min-height: 390px;
+    .slick-slider, .slick-slider .slick-list, .slick-slider .slick-list .slick-track {
+        display: flex;
+        flex: 1;
+        min-height: 250px;
+        @include bp ($tablet) {
+            min-height: 390px;
+        }
     }
-}
 }
 .section_first {
     .slick-prev, .slick-next {
-    width: 50px;
-    height: 50px;
-    background: url($bgurl + 'sliderarrows.png');
-    text-indent: -9999px;
-    overflow: hidden;
-    border: none;
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    transform: translateY(50%);
-}
+        width: 50px;
+        height: 50px;
+        background: url($bgurl + 'sliderarrows.png');
+        text-indent: -9999px;
+        overflow: hidden;
+        border: none;
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        transform: translateY(50%);
+    }
     .slider {
         margin: 0 0 35px;
         flex: 1;
         position: relative;
     }
-    
+
     .slick-prev {
-    right: 128px;
-    @include bp ($tablet) {
-        width: 95px;
-        height: 95px;
-        background-size: 205px 95px;
-        right: 142px;
-    }
-    @include bp ($mob) {
-    width: 50px;
-    height: 50px;
-    background: url($bgurl + 'sliderarrows.png');
-    
-    }
+        right: 128px;
+        @include bp ($tablet) {
+            width: 95px;
+            height: 95px;
+            background-size: 205px 95px;
+            right: 142px;
+        }
+        @include bp ($mob) {
+            width: 50px;
+            height: 50px;
+            background: url($bgurl + 'sliderarrows.png');
+
+        }
     }
     .slick-next {
-    right: 65px;
-    background-position: 160px 0px;
-        @include bp ($tablet) {
-        width: 95px;
-        height: 95px;
-        background-size: 205px 95px;
-        background-position:96px 0px;
-        right: 35px;
-}
-        @include bp ($mob) {
-        width: 50px;
-        height: 50px;
-        background: url($bgurl + 'sliderarrows.png');
+        right: 65px;
         background-position: 160px 0px;
-        right: 70px;
-    }
+        @include bp ($tablet) {
+            width: 95px;
+            height: 95px;
+            background-size: 205px 95px;
+            background-position:96px 0px;
+            right: 35px;
+        }
+        @include bp ($mob) {
+            width: 50px;
+            height: 50px;
+            background: url($bgurl + 'sliderarrows.png');
+            background-position: 160px 0px;
+            right: 70px;
+        }
     }
     .slick-dots {
-    position: absolute;
-    right: 69px;
-    bottom: calc(50% - 93px);
-    text-indent: -9999px;
-    list-style: none;
-    @include bp ($tablet) {
-        bottom: calc(50% - 70px);
-        right: 40px;
-    }
-    @include bp ($mob) {
-        bottom: calc(50% - 80px);
-        right: 20px;
-    }
-    }
-        .slick-dots li {
-    display: block;
-    width: 12px;
-    height: 12px;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    text-indent: -9999px;
-    margin-bottom: 16px;
+        position: absolute;
+        right: 69px;
+        bottom: calc(50% - 93px);
+        text-indent: -9999px;
+        list-style: none;
         @include bp ($tablet) {
-        width: 18px;
-        height: 18px;
+            bottom: calc(50% - 70px);
+            right: 40px;
+        }
+        @include bp ($mob) {
+            bottom: calc(50% - 80px);
+            right: 20px;
+        }
     }
-            @include bp ($mob) {
-             width: 12px;
+    .slick-dots li {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        text-indent: -9999px;
+        margin-bottom: 16px;
+        @include bp ($tablet) {
+            width: 18px;
+            height: 18px;
+        }
+        @include bp ($mob) {
+            width: 12px;
             height: 12px;
-            }
-}
-        .slick-active {
-    background: #fff !important;
-}
+        }
     }
+    .slick-active {
+        background: #fff !important;
+    }
+}
 
 .col {
     margin: auto;
@@ -204,7 +204,7 @@
     @include bp ($mob) {
         padding: 0 15px;
     }
-    
+
     &__first {
         display: flex;
         flex-direction: column;
@@ -216,14 +216,14 @@
     }
     &__second {
         display: flex;
-        flex-direction: column;  
+        flex-direction: column;
         margin: auto;
         height: 100%;
         flex-basis: 32%;
     }
     &__third {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         height: 100%;
         flex-basis: 32%;
         @include bp ($tablet) {
@@ -303,10 +303,10 @@
         display: none;
         position: relative;
         @include bp ($tablet) {
-        display: block;
-        font-size: 1.7em;
+            display: block;
+            font-size: 1.7em;
             opacity: 0.4;
-    } 
+        }
         &:before {
             content: "";
             position: absolute;
@@ -320,112 +320,7 @@
         }
     }
 }
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0px;
-    background: #fff;
-    z-index: 1;
-            @include bp ($tablet) {
-                display: none;
-            }
-    &__list {
-        &_main {
-        list-style: none;
-        margin: 0 80px 51px 90px;
-        padding: 0px 100px 0 0;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        left: -20px;
-            @include bp ($tablet) {
-            flex-direction: column;
-            padding: 0 0 65px 0;
-            margin: 0 35px 40px;
-            left: 0;
-            flex-grow: 1;
-            }
-            @include bp ($mob) {
-                margin: 0 20px 20px;
-                padding: 0 0 30px 0;
-            }
-        &:before {
-        content: "";
-        width: 91%;
-        border-top: 1px solid $bordergrey;
-        position: absolute;
-        top: 1px;
-        right: 0px;
-        z-index: -1;  
-            @include bp ($tablet) {
-                width: 86%;
-            }
-    } 
-            @include bp ($tablet) {
-                &:after {
-                content: "";
-            width: 100%;
-            border-top: 1px solid $bordergrey;
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-                }
-            }   
-    }
-    &_bottom {
-        background: $bgmain;
-        list-style: none;
-        padding: 20px 10px;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        font-size: 1em;
-        opacity: 0.6;
-         @include bp ($desktopsmall) {
-                font-size: 0.8em;
-            }
-        @include bp ($tablet) {
-            font-size: 1.6em;
-            flex-direction: column;
-            align-items: center;
-            padding: 63px 40px;
-        }
-        @include bp ($mob) {
-            font-size: 0.7em;
-            padding: 30px 15px;
-        }
 
-        }
-}
-    &__list {
-        margin: 0 20px 0 0;
-        @include bp ($tablet) {
-            margin: 0 0 46px 0;
-        }
-        @include bp ($mob) {
-            margin: 0 0 30px 0;
-        }
-        &:first-child {
-            margin-right: auto;
-            @include bp ($tablet) {
-                order: 4;
-                margin: -35px 0 0 0;
-                align-self: flex-start;
-            }
-            @include bp ($mob) {
-                margin: -20px 0 0 0;
-            }
-        }
-        &:last-child {
-            margin-left: auto;
-            @include bp ($tablet) {
-                margin: 0;
-                align-self: flex-end;
-            }
-        }
-    }
-}
 .benefits {
     display: flex;
     flex-direction: column;
@@ -434,26 +329,26 @@
         border-top: 3px solid $bgHeader;
     }
     @include bp ($desktopsmall) {
-                font-size: 0.8em;
-            }
-     @include bp (900) {
-                font-size: 0.7em;
-            }
+        font-size: 0.8em;
+    }
+    @include bp (900) {
+        font-size: 0.7em;
+    }
     @include bp ($tablet) {
         &:first-child {
-        border-top: 3px solid $bgHeader;
-        width: 195px;
-    }
+            border-top: 3px solid $bgHeader;
+            width: 195px;
+        }
         @include bp ($mob) {
             padding: 10px 0 0 0;
         }
-    &:nth-child(n + 4) {
-        margin-top: 45px;
-        @include bp ($mob) {
-            margin-top: 20px;
+        &:nth-child(n + 4) {
+            margin-top: 45px;
+            @include bp ($mob) {
+                margin-top: 20px;
+            }
         }
     }
-            }
     &__mob {
         display: none;
         @include bp ($tablet) {
@@ -462,19 +357,19 @@
             font-size: 2.85em;
         }
     }
-    
+
     &__first {
         display: inline-block;
         min-height: 1.35em;
         font-size: 1em;
         opacity: 0.6;
         @include bp ($tablet) {
-             min-height: 1em;
+            min-height: 1em;
         }
     }
     &__main {
         font-size: 2.625em;
-        
+
     }
     &__last {
         font-size: 1em;
@@ -484,7 +379,7 @@
 .medals {
     margin: auto 0;
     text-align: center;
-        padding: 0 30px;
+    padding: 0 30px;
     @include bp ($tablet) {
         margin: 0 0 50px 0;
     }
@@ -521,14 +416,14 @@
     }
     &__text_slider {
         @include bp ($tablet){
-        font-size: 2em;
+            font-size: 2em;
         }
     }
     &__text {
         text-align: center;
         color: #3d3d3d;
         @include bp ($tablet){
-        font-size: 2em;
+            font-size: 2em;
         }
     }
     @include bp ($tablet) {
@@ -544,7 +439,7 @@
         width: 18px;
         height: 35px;
         background: url(../images/medalarrow.png) no-repeat;
-    } 
+    }
     .slick-next {
         background: url(../images/medalarrow.png) no-repeat;
         right: 8px;
@@ -555,7 +450,7 @@
         @include bp ($tablet) {
             right: 30px;
             top: calc(50% - 80px)
-    }
+        }
     }
     .slick-prev {
         transform: rotateY(180deg);
@@ -570,7 +465,7 @@
         margin: 15px auto 0;
         padding: 5px 0 0 0;
         @include bp ($tablet) {
-                margin: 75px auto 0;
+            margin: 75px auto 0;
         }
         .slick-active {
             background: $bgHeader !important;
@@ -586,15 +481,15 @@
                 border: 0;
             }
             @include bp ($tablet) {
-            width: 15px;
-            height: 15px;
-        }
+                width: 15px;
+                height: 15px;
+            }
         }
     }
     .slick-slide img {
         @include bp ($tablet) {
-        margin: 0 auto 23px;
-        width: 380px;
+            margin: 0 auto 23px;
+            width: 380px;
         }
         @include bp ($mob) {
             width: 70%;
@@ -644,7 +539,7 @@
         vertical-align: baseline;
     }
     @include bp ($mob) {
-         width: 20px;
+        width: 20px;
         height: 18px;
         background: url('../images/social.png') no-repeat;
         background-position: -40px 0;
@@ -664,4 +559,111 @@
 .section {
     display: flex;
     flex-direction: column;
+}
+
+.about__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0px;
+    background: #fff;
+    z-index: 1;
+    @include bp ($tablet) {
+        display: none;
+    }
+    &__list {
+        &_main {
+            list-style: none;
+            margin: 0 80px 51px 90px;
+            padding: 0px 100px 0 0;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            left: -20px;
+            @include bp ($tablet) {
+                flex-direction: column;
+                padding: 0 0 65px 0;
+                margin: 0 35px 40px;
+                left: 0;
+                flex-grow: 1;
+            }
+            @include bp ($mob) {
+                margin: 0 20px 20px;
+                padding: 0 0 30px 0;
+            }
+            &:before {
+                content: "";
+                width: 91%;
+                border-top: 1px solid $bordergrey;
+                position: absolute;
+                top: 1px;
+                right: 0px;
+                z-index: -1;
+                @include bp ($tablet) {
+                    width: 86%;
+                }
+            }
+            @include bp ($tablet) {
+                &:after {
+                    content: "";
+                    width: 100%;
+                    border-top: 1px solid $bordergrey;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                }
+            }
+        }
+        &_bottom {
+            background: $bgmain;
+            list-style: none;
+            padding: 20px 10px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-size: 1em;
+            opacity: 0.6;
+            @include bp ($desktopsmall) {
+                font-size: 0.8em;
+            }
+            @include bp ($tablet) {
+                font-size: 1.6em;
+                flex-direction: column;
+                align-items: center;
+                padding: 63px 40px;
+            }
+            @include bp ($mob) {
+                font-size: 0.7em;
+                padding: 30px 15px;
+            }
+
+        }
+    }
+    &__list {
+        margin: 0 20px 0 0;
+        @include bp ($tablet) {
+            margin: 0 0 46px 0;
+        }
+        @include bp ($mob) {
+            margin: 0 0 30px 0;
+        }
+        &:first-child {
+            margin-right: auto;
+            @include bp ($tablet) {
+                order: 4;
+                margin: -35px 0 0 0;
+                align-self: flex-start;
+            }
+            @include bp ($mob) {
+                margin: -20px 0 0 0;
+            }
+        }
+        &:last-child {
+            margin-left: auto;
+            @include bp ($tablet) {
+                margin: 0;
+                align-self: flex-end;
+            }
+        }
+    }
 }

@@ -1,14 +1,9 @@
 require([
-'jquery',
 'domReady!',
-'slick',
-'jquery.fullpage',
-'gmaps',
-'main',
-
+ 'main',
 ], function ($) {
 'use strict';
 
-    
+
 
 });

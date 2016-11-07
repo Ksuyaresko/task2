@@ -380,6 +380,7 @@
         }
         @include bp ($mob) {
             top: 78px;
+            right: 70px;
         }
     }
     &__lg {
@@ -388,15 +389,20 @@
 }
 
 
-    header__search_active:before {
+    .header__search_active:before {
         content: "";
         display: block;
         position: absolute;
-        width: 90%;
+        width: 0%;
         border-bottom: 1px solid #fff;
         z-index: 1000;
-    }
+        @include bp ($tablet) {
+            width: 80%;
+            left: 70px;
+            top: 90px;
 
+        }
+    }
 
 .callback__btn {
     display: none;
@@ -588,6 +594,9 @@
         top: 18px !important;
         
     }
+    @include bp ($mob) {
+        right: 20px !important;
+    }
 }
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
     border-color: transparent transparent #fff transparent;
@@ -666,7 +675,8 @@
     }
     @include bp ($mob) {
         top: 78px;
-         width: 101px !important;
+         width: 70px !important;
+        padding: 17px 20px 14px 0;
     }
 }
 .select2 {

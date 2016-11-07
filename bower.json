@@ -21,8 +21,7 @@
     "backbone.radio": "^2.0.0-pre.1",
     "backbone.marionette": "marionette#^2.4.7",
     "slick-carousel": "^1.6.0",
-    "fullpage.js": "^2.8.8",
-    "gmaps": "https://github.com/hpneo/gmaps.git#^0.4.24"
+    "fullpage.js": "^2.8.8"
   },
   "overrides": {
     "renames": {

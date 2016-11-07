@@ -1,22 +1,14 @@
-
-
-
-
-
 require([
-    'jquery',
     'domReady!',
-    'gmaps',
-    'https://maps.googleapis.com/maps/api/js?callback=myMap',
 
-], function ($) {
+
+], function () {
     'use strict';
 
-    /*var map = new GMaps({
-        el: '#mymap',
-        lat: -12.043333,
-        lng: -77.028333
-    });*/
-
+    /*var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBTWW9cR4CPuvpIMHEDpZ28M1gnQg0zqNE';
+    document.body.appendChild(script);*/
+    
 });
 

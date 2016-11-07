@@ -1,35 +1,101 @@
-.contacts {
-  padding: 0 40px;
+.wrapperMain {
+  min-height: 100vh;
   display: flex;
-  height: 90vh;
+  flex-direction: column;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  min-width: $minWidth;
+  @include bp ($desktopsmall) {
+    font-size: 0.8em;
+  }
+  @include bp ($tablet) {
+    font-size: 1em;
+  }
+  @include bp ($mob) {
+    font-size: 0.7em;
+  }
+
   &__nav {
-    padding: 0 40px;
+    padding: 21px 67px;
+    width: 100%;
+    word-spacing: 13px;
+    @include bp ($tablet) {
+      padding: 21px 30px;
+    }
+    &_link {
+      display: inline-block;
+      padding:10px 0;
+      word-spacing: 3px;
+      text-decoration: none;
+    }
+    span:last-child {
+      display: none;
+    }
   }
   &__title {
-
+    font-size: 2.125em;
+    margin: 0 0 30px 0;
+  }
+  &__text {
+    margin: 0 0 4px 0;
+    font-size: 1em;
+  }
+  &__mainblock {
+    padding: 0 40px;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    @include bp ($tablet) {
+    flex-direction: column;
+      padding: 0 30px 50px;
+  }
   }
   &__main {
     display: flex;
     flex-direction: column;
     margin: auto 0;
+    width: 100%;
+    padding: 0 0 0 25px;
+    @include bp ($tablet) {
+      margin: 0 0 50px 0;
+      padding: 0 0 0 0px;
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    padding: 30px 0 15px 0;
   }
   &__tel {
     display: flex;
     flex-direction: column;
+    margin: 0 0 27px 0;
     &_icon {
       display: inline-block;
-      width: 50px;
+      width: 37px;
       vertical-align: middle;
+      margin: 0 0 0 3px;
       path {
         fill: $bgHeader;
       }
     }
+    &_schedule {
+      margin: 0 0 0 45px;
+    }
   }
   &__email {
+    margin: 0 0 35px 0;
     &_icon {
       display: inline-block;
-      width: 50px;
+      width: 40px;
       vertical-align: middle;
+
       path {
         fill: $bgHeader;
       }
@@ -37,23 +103,57 @@
     }
   }
   &__address {
+    margin: 0 0 20px 0;
     &_icon {
       display: inline-block;
-      width: 50px;
+      width: 36px;
       vertical-align: middle;
+      margin: 0 0 0 4px;
+
 
     }
   }
   &__marketing {
     display: flex;
     flex-direction: column;
+    line-height: 2.2;
+    margin: 0 0 23px 0;
+    &_first {
+      font-size: 1.125em;
+      font-weight: bold;
+      .grey {
+        font-size: 0.875em;
+        font-weight: normal;
+      }
+    }
   }
   &__rent {
     display: flex;
     flex-direction: column;
+    line-height: 2;
+    margin: 0 0 20px 0;
+    &_first {
+      font-size: 1.125em;
+      font-weight: bold;
+      .grey {
+        font-size: 0.875em;
+        font-weight: normal;
+      }
+    }
   }
   &__vk {
     color: $bgHeader;
+    font-size: 1em;
+    padding: 15px 0 0 5px;
+    .fa-vk {
+      font-size: 1.3em;
+      display: inline-block;
+      margin: 0 10px 0 0;
+    }
+    &_link {
+      color: $bgHeader;
+      text-decoration: none;
+    }
     &_arrow {
       display: inline-block;
       width: 22px;
@@ -62,5 +162,12 @@
         fill: $bgHeader;
       }
     }
+  }
+}
+.map {
+  &__box {
+    width: 100%;
+    height: 640px;
+    margin: auto 0;
   }
 }

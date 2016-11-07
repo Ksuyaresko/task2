@@ -1,0 +1,100 @@
+.footer {
+
+  background: $bgmain;
+  border-top: 1px solid #f0f0f0;
+  &__list {
+    &_main {
+      list-style: none;
+      margin: 0 80px 51px 90px;
+      padding: 0px 100px 0 0;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      left: -20px;
+      @include bp ($tablet) {
+        flex-direction: column;
+        padding: 0 0 65px 0;
+        margin: 0 35px 40px;
+        left: 0;
+        flex-grow: 1;
+      }
+      @include bp ($mob) {
+        margin: 0 20px 20px;
+        padding: 0 0 30px 0;
+      }
+      &:before {
+        content: "";
+        width: 91%;
+        border-top: 1px solid $bordergrey;
+        position: absolute;
+        top: 1px;
+        right: 0px;
+        z-index: -1;
+        @include bp ($tablet) {
+          width: 86%;
+        }
+      }
+      @include bp ($tablet) {
+        &:after {
+          content: "";
+          width: 100%;
+          border-top: 1px solid $bordergrey;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+        }
+      }
+    }
+    &_bottom {
+      background: $bgmain;
+      list-style: none;
+      padding: 20px 10px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      font-size: 1em;
+      opacity: 0.6;
+      @include bp ($desktopsmall) {
+        font-size: 0.8em;
+      }
+      @include bp ($tablet) {
+        font-size: 1.6em;
+        flex-direction: column;
+        align-items: center;
+        padding: 63px 40px;
+      }
+      @include bp ($mob) {
+        font-size: 0.7em;
+        padding: 30px 15px;
+      }
+
+    }
+  }
+  &__list {
+    margin: 0 20px 0 0;
+    @include bp ($tablet) {
+      margin: 0 0 46px 0;
+    }
+    @include bp ($mob) {
+      margin: 0 0 30px 0;
+    }
+    &:first-child {
+      margin-right: auto;
+      @include bp ($tablet) {
+        order: 4;
+        margin: -35px 0 0 0;
+        align-self: flex-start;
+      }
+      @include bp ($mob) {
+        margin: -20px 0 0 0;
+      }
+    }
+    &:last-child {
+      margin-left: auto;
+      @include bp ($tablet) {
+        margin: 0;
+        align-self: flex-end;
+      }
+    }
+  }
+}
