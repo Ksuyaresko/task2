@@ -1,5 +1,5 @@
 {
-  contact: {tel: '0 800 300 703', schedule: 'ежедневно с 9:00 до 21:00', email: 'hotline@lombard.credit', address: 'г. Запорожье, ул. Сталеварова д. 1', vklink: 'vk.com'},
+  contact: {tel: '0 800 300 703', schedule: 'ежедневно с 9:00 до 21:00', email: 'hotline@lombard.credit', address: 'г. Запорожье, ул. Сталеварова д. 1'},
   contactsNav: [
   {href: 'http://localhost.o.o:3010/index', name: 'Главная'},
   {href: 'http://localhost.o.o:3010/index', name: 'О компании'},

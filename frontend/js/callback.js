@@ -1,7 +1,6 @@
 require([
     'jquery',
     'domReady!',
-    'main',
 ], function ($) {
     'use strict';
 

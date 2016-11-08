@@ -1,6 +1,5 @@
 require([
     'domReady!',
-    'main',
     'https://maps.googleapis.com/maps/api/js?key=AIzaSyBTWW9cR4CPuvpIMHEDpZ28M1gnQg0zqNE',
 ], function ($) {
     'use strict';

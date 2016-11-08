@@ -8,80 +8,25 @@
     {{ title }}
 {% endblock %}
 
+{% block jsEntryPoint %}
+    {{ asset('/dependencies/js/main/about.js') }}
+{% endblock %}
+
 {% block wrapper %}
     <div class="about">
-
-        <h5 class="about__nav">
-            <div class="wrapper">
-                <a href="index.html" class="about__nav_link">Главная</a>
-                <span>/</span>
-                <a href="about.html" class="about__nav_link"> О компании</a>
-            </div>
-        </h5>
-
-        <h5 class="about__nav_mob ">
-            <div class="wrapper">
-                <a href="about.html" class="about__nav_link">Назад</a>
-            </div>
-        </h5>
-
-
-
-        <div id="fullpage">
+        {% include '_aboutnav.twig' %}
+    <div id="fullpage">
 
             {% include '_about1.twig' %}
             {% include '_about2.twig' %}
             {% include '_about3.twig' %}
 
-        </div><!--fullpage end-->
+     </div><!--fullpage end-->
 
-        <div class="about__footer">
-            <div class="wrapper">
-                <ul class="about__footer__list_main">
-                    {% for text in benefits %}
-                        <li class="benefits">
-                            <span class="benefits__first">{{ text.top}}</span>
-                            <span class="benefits__main">{{ text.text}}</span>
-                            <span class="benefits__last">{{ text.bottom}}</span>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="background">
-                <div class="wrapper">
-                    <ul class="about__footer__list_bottom">
-
-                        <li class="about__footer__list"><span>Lombard Capital 2016</span></li>
-                        <li class="about__footer__list"><span>Виды залогов</span></li>
-                        <li class="about__footer__list"><span>Условия договора</span></li>
-                        <li class="about__footer__list"><span>Тарифные планы</span></li>
-                        <li class="about__footer__list">
-                            <a href="ok.com" class="social ok">ok</a>
-                            <a href="vk.com" class="social vk">vk</a>
-                            <a href="fb.com" class="social fb">fb</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
+        {% include '_aboutfooter.twig' %}
 
     </div>
 
-    <div class="wrapper">
-        <ul class="about__footer__list_bottom">
-
-            <li class="about__footer__list"><span>Lombard Capital 2016</span></li>
-            <li class="about__footer__list"><span>Виды залогов</span></li>
-            <li class="about__footer__list"><span>Условия договора</span></li>
-            <li class="about__footer__list"><span>Тарифные планы</span></li>
-            <li class="about__footer__list">
-                <a href="ok.com" class="social ok">ok</a>
-                <a href="vk.com" class="social vk">vk</a>
-                <a href="fb.com" class="social fb">fb</a>
-            </li>
-        </ul>
-    </div>
-
+    {% include '_aboutbottom.twig' %}
 
 {% endblock %}

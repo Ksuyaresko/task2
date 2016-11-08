@@ -1,6 +1,8 @@
 {
   title: 'I am in fixtures (fixtures/index.json)',
     vkLink: 'https://vk.com/',
+    okLink: 'https://vk.com/',
+    fbLink: 'https://vk.com/',
     navs: [
         {href: 'kredits.html', name: 'Кредиты', class: 'submemu',
         submenu: [
@@ -14,16 +16,18 @@
         
         {href: 'kredits.html', name: 'Программа лояльности'},
         
-        {href: 'kredits.html', name: 'О компании', class: 'submemu submenu__mob', 
+        {href: 'http://localhost.o.o:3010/about', name: 'О компании', class: 'submemu submenu__mob',
          submenu: [
-        {href: 'kredits.html', name: 'О нас'},
-        {href: 'kredits.html', name: 'Контакты'},
+        {href: 'http://localhost.o.o:3010/about', name: 'О нас'},
+        {href: 'http://localhost.o.o:3010/contacts', name: 'Контакты'},
         {href: 'kredits.html', name: 'Новости'},
         {href: 'kredits.html', name: 'Вопросы'},
         {href: 'kredits.html', name: 'Реквизиты'},
-        {href: 'kredits.html', name: 'Финансовая отчетность'},
+        {href: 'kredits.html', name: 'Финансовая отчетность'}
         ],
-        subelement: "1",},
+        subelement: "1"}
     ],
+  indexlink: 'http://localhost.o.o:3010/index',
+
     
 }

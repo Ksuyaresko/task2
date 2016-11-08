@@ -28,9 +28,10 @@
         <script
                 async="async"
                 src="{{ asset('/dependencies/js/require.js') }}"
-                data-main="{% block jsEntryPoint %}{{ asset('/dependencies/js/main/main.js') }}{% endblock %}"
-                ></script>
+                data-main="{% block jsEntryPoint %}{{ asset('/dependencies/js/main.js') }}{% endblock %}"
+                >
 
+        </script>
     {% endif %}
     {% endblock %}
 

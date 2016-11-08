@@ -8,9 +8,13 @@
 {{ title }}
 {% endblock %}
 
+{% block jsEntryPoint %}
+    {{ asset('/dependencies/js/main/index.js') }}
+{% endblock %}
+
 {% block wrapper %}
 <div class="promo">
     {% include '_promoslider.twig' with {'promo'} %}
-    {% include '_promonews.twig' with {'news'} %}  
+    {% include '_promonews.twig' with {'news'} %}
 </div>
 {% endblock %}
